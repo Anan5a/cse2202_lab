@@ -6,7 +6,8 @@ def make_set(x, parent: dict, rank: dict):
 def find_set(x, parent: dict):
     if parent[x] == x:
         return x
-    return find_set(parent[x], parent)
+    parent[x] = find_set(parent[x], parent)
+    return parent[x]
 
 
 def union(x, y, rank: dict, parent: dict):

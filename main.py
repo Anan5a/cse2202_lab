@@ -8,9 +8,9 @@ from dfs import run_detect_cycle,run_scc
 # data = [[2, 6], [2, 12], [1, 2], [9, 12], [8, 13], [3, 6], [2, 5]]  # Labid
 if __name__ == '__main__':
     # run_dfs()
-    #run_kruskal()
+    run_kruskal()
     # run_detect_cycle()
-    run_scc()
+    # run_scc()
     # print('Earliest Start time: ', end='')
     # print(earliest_start_time(data))
     # print('Shortest interval: ', end='')

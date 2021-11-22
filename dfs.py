@@ -26,7 +26,8 @@ def dfs(adjacent: dict, visited: list, u, stack: list):
     # print(u, end=' ')
     stack.append(u)
 
-
+'''
+The following function is unnecessary :/
 def dfs_transpose(adjacent: dict, visited: list, u, stack: list):
     if u not in visited:
         visited.append(u)
@@ -35,7 +36,7 @@ def dfs_transpose(adjacent: dict, visited: list, u, stack: list):
                 dfs_transpose(adjacent, visited, element, stack)
     # print(u)
     stack.append(u)
-
+'''
 
 def run_dfs():
     inlist = list(input("Enter name of vertices: ").split(''))
@@ -149,7 +150,7 @@ def run_scc():
             ts = []
             scc += 1
             print("SCC %d:" % scc, end=' ')
-            dfs_transpose(transpose_adj, visited_transpose, item, ts)
-            for i in ts:
-                print(i, end='')
+            dfs(transpose_adj, visited_transpose, item, ts)
+            while ts:
+                print(ts.pop(), end='')
             print()
