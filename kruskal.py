@@ -39,28 +39,13 @@ def kruskal(nodes: list, edges: list):
 
 
 def run_kruskal():
-    nodes = 'a b h c i g d f e'.split(' ')  # input('Enter node names: ').split()
-    edge_count = 14  # int(input('Enter number of edges: '))
-    edges = [
-        ['a', 'b', 4],
-        ['a', 'h', 8],
-        ['b', 'h', 11],
-        ['b', 'c', 8],
-        ['c', 'i', 2],
-        ['i', 'h', 7],
-        ['i', 'g', 6],
-        ['h', 'g', 1],
-        ['g', 'f', 2],
-        ['c', 'f', 4],
-        ['c', 'd', 7],
-        ['d', 'f', 14],
-        ['d', 'e', 9],
-        ['e', 'f', 10]
-    ]
+    nodes = input('Enter node names: ').split()
+    edge_count = int(input('Enter number of edges: '))
+    edges = []
     print('Enter Edges: ')
-    # for i in range(edge_count):
-    #     u, v, w = input('Enter Edge (%d)' % (i+1)).split(' ')
-    #     edges.append([u, v, int(w)])
+    for i in range(edge_count):
+        u, v, w = input('Enter Edge (%d)' % (i + 1)).split(' ')
+        edges.append([u, v, int(w)])
     result = kruskal(nodes, edges)
     print('Following edges produces MST')
     for item in result['selected']:

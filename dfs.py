@@ -23,7 +23,7 @@ def dfs(adjacent: dict, visited: list, u, stack: list):
             if element not in visited:
                 dfs(adjacent, visited, element, stack)
 
-    # print(u, end=' ')
+    print(u, end=' ')
     stack.append(u)
 
 '''
@@ -71,14 +71,11 @@ def run_topological():
     print("Enter edge info. One per line: ")
     for i in inlist:
         adj[i] = []
-
     for i in range(e):
         u, v = input("Enter edge %d: " % (i + 1)).split(' ')
         adj[u].append(v)
-        # adj[v].append(u)
 
     print(adj)
-
     visitedO = []
     print('Topological sort: ')
     for vertex in adj:
